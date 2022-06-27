@@ -1,0 +1,29 @@
+{
+  "name": "hope-hacks-group-11",
+  "version": "1.0.0",
+  "description": "- You should be using a single Github repo for you and your team to work on. - Your directories need to be structured and neat.  - You should not upload any of your node modules onto this repo. - Your README.md file should include steps to installing and running your app. You should also include the certain technologies you used to build your app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5haar/Hope-Hacks-Group-11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5haar/Hope-Hacks-Group-11/issues"
+  },
+  "homepage": "https://github.com/5haar/Hope-Hacks-Group-11#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^1.3.3",
+    "request": "^2.88.2"
+  }
+}

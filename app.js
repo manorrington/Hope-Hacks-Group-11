@@ -24,6 +24,17 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
+app.get('/theteam', (req, res) => {
+    res.render('theteam');
+});
+
+app.get('/buildaplan', (req, res) => {
+    res.render('buildaplan');
+});
+
+app.get('/learnnearyou', (req, res) => {
+    res.render('learnnearyou');
+});
 
 // Listen on Port 5000
 app.listen(port, () => console.info(`App listening on port ${port}`));

@@ -32,61 +32,37 @@
     <!-- End Header -->
 
 
-    <%- body %>
+
+    <section class="main_body_container">
+        <section class="body_container">
+
+            <%- body %>
+
+        </section>
+    </section>
+
+
 
     <!-- Footer -->
-    <footer>
         <footer>
-            <style>
-                @font-face {
-                font-family: 'SpaceMonoBold';
-                src: url('SpaceMono-Bold.ttf')
-                } 
-        
-                footer {
-                    display: flex;
-                    justify-content: center;
-                    align-items: baseline;
-                    background-color: transparent;
-                }
-        
-                .socials {
-                    display: flex;
-                    list-style: none;
-                    text-decoration: none;
-                }
-        
-                .socials a {
-                    text-decoration: none;
-                    padding: 1em;
-                    font-size: 2em;
-                    color: black;
-                    transition: all 0.4s;
-                }
-        
-                .socials a:visited {
-                    color: black;
-                    text-decoration: none;
-                }
-        
-                .socials a:hover {
-                    transform: translate(0px, -10px);
-                }
-                .copyright {
-                    font-size: 1em;
-                    font-family: 'SpaceMonoBold';
-                }
-                
-            </style>
+            <section class="footer_container">
+                <div class="map1"></div>
+                <ul class="socials">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-snapchat"></a></li>
+                </ul>
+                <ul class="footer_ul">
+                    <li class="foot_link"><a class="foot_a" href="/">Home</a></li>
+                    <li class="foot_link"><a class="foot_a" href="/learnnearyou">Learn Near You</a></li>
+                    <li class="foot_link"><a class="foot_a" href="buildaplan">Build A Plan</a></li>
+                    <li class="foot_link"><a class="foot_a" href="/theteam">The Team</a></li>
+                    <li class="foot_link"><a class="foot_a" href="/about">About Us</a></li>
+                </ul>
+            </section>
             <small class="copyright">© Copyright Learnify 2022</small>
-            <ul class="socials">
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
-                <li><a href="#" class="fa fa-instagram"></a></li>
-                <li><a href="#" class="fa fa-snapchat"></a></li>
-            </ul>
         </footer>
-    </footer>
     <!-- End Footer -->
 </body>
 </html>

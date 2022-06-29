@@ -1,5 +1,6 @@
-.home_container {
-    max-width: 1300px;
+.main_container {
+    width: 70vw;
     height: 100vh;
     margin: 2em;
 }
+

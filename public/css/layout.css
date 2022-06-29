@@ -98,20 +98,13 @@
   opacity: 200%;
 }
 
-.main_body_container {
-  width: 100%;
-  background-color: var(--aliceblue);
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
 
 .body_container {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  max-width: 1300px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: var(--aliceblue);
 }
 
 footer {

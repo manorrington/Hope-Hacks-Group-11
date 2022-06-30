@@ -1,6 +1,78 @@
+@import url('http://fonts.cdnfonts.com/css/british-council-sans');
+
+@font-face {
+    font-family: 'SpaceMonoBold';
+    src: url('SpaceMono-Bold.ttf')
+  }
+
+@font-face {
+    font-family: 'SpaceMonoRegular';
+    src: url('SpaceMono-Regular.ttf')
+  }   
+
+:root {
+    --grey: #2F2F2F;
+    --eerieblack: #222222;
+    --mainblue: #00FFE1;
+    --white: #FFFFFF;
+    --prussianBlue: #212D40;
+    --richBlack: #11151C;
+    --lightCyan: #D0F4EA;
+    --cadetGrey: #829399;
+    --greyweb: #7E8287;
+    --oldrose: #B98389;
+    --aliceblue: #E1F2FE;
+    --melon: #F7AF9D;
+    --puce: #C08497;
+    --maxbluegreen: #75B9BE;
+  }
+
 .main_container {
     width: 70vw;
     height: 100vh;
     margin: 2em;
+    font-family: 'SpaceMonoRegular', sans-serif;
 }
+
+.map_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.locationmap {
+    height: 60vh;
+    width: 100%;
+    border-radius: 4px;
+    margin: 2em;
+    padding-left: 3em;
+}
+
+button {
+    font-family: 'SpaceMonoRegular', sans-serif;
+    color: var(--richBlack);
+    transition: all 0.4s;
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location_link {
+    width: 10em;
+    height: 3.5em;
+    margin: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--richBlack);
+    color: var(--maxbluegreen);
+}
+
 

@@ -1,3 +1,32 @@
+@import url('http://fonts.cdnfonts.com/css/british-council-sans');
+
+@font-face {
+    font-family: 'SpaceMonoBold';
+    src: url('SpaceMono-Bold.ttf')
+  } 
+
+@font-face {
+    font-family: 'SpaceMonoRegular';
+    src: url('SpaceMono-Regular.ttf')
+  }
+
+:root {
+    --grey: #2F2F2F;
+    --eerieblack: #222222;
+    --mainblue: #00FFE1;
+    --white: #FFFFFF;
+    --prussianBlue: #212D40;
+    --richBlack: #11151C;
+    --lightCyan: #D0F4EA;
+    --cadetGrey: #829399;
+    --greyweb: #7E8287;
+    --oldrose: #B98389;
+    --aliceblue: #E1F2FE;
+    --melon: #F7AF9D;
+    --puce: #C08497;
+    --maxbluegreen: #75B9BE;
+  }
+
 .main_container {
     width: 70vw;
     height: 100vh;

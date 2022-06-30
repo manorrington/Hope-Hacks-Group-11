@@ -19,24 +19,35 @@
                     <h1 class="logo_text"><a class="learnify" href="/">Learnify</a></h1>
                     <small class="motto">The Future of Learning</small>
                 </section>
+                <!--  mobile responsive nav - Jose -->
+                <section class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </section>
+              <section class="navbar-links">
                 <ul class="navbar_ul">
                     <li class="nav_link"><a class="nav_a" href="/">Home</a></li>
                     <li class="nav_link"><a class="nav_a" href="/learnnearyou">Learn Near You</a></li>
-                    <li class="nav_link"><a class="nav_a" href="/buildaplan">Build A Plan</a></li>
-                    <li class="nav_link"><a class="nav_a" href="/theteam">The Team</a></li>
+                    <li class="nav_link"><a class="nav_a" href="buildaplan">Build A Plan</a></li>
+                    <li class="nav_link"><a class="nav_a" href="/theteam">Contact Team</a></li>
                     <li class="nav_link"><a class="nav_a" href="/about">About Us</a></li>
                 </ul>
+            </section>
             </section>
         </section>
     </section>
     <!-- End Header -->
 
 
-    
-            <section class="body_container">
-                <%- body %>
-            </section>
 
+    <section class="main_body_container">
+        <section class="body_container">
+
+            <%- body %>
+
+        </section>
+    </section>
 
 
 
@@ -53,18 +64,21 @@
                     <li class="foot_link"><a class="foot_a" href="/">Home</a></li>
                     <li class="foot_link"><a class="foot_a" href="/learnnearyou">Learn Near You</a></li>
                     <li class="foot_link"><a class="foot_a" href="buildaplan">Build A Plan</a></li>
-                    <li class="foot_link"><a class="foot_a" href="/theteam">The Team</a></li>
+                    <li class="foot_link"><a class="foot_a" href="/theteam">Contact Team</a></li>
                     <li class="foot_link"><a class="foot_a" href="/about">About Us</a></li>
                 </ul>
             </section>
             <small class="copyright">© Copyright Learnify 2022</small>
         </footer>
     <!-- End Footer -->
-    <script
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg&callback=initMap&v=weekly"
-         defer
-         ></script>
-    <script type="module" src="../mapsapi.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0] 
+
+toggleButton.addEventListener('click', () => { 
+    navbarLinks.classList.toggle('active') 
+})
+    </script>
 </body>
 </html>

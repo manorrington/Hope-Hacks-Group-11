@@ -17,13 +17,6 @@ app.set('view engine', 'ejs');
 
 // Navigation
 
-app.get('/:learningExperience', (req, res)=> {
-    let location = req.params.learningExperience;
-    let dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=${location}+near+me&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg`;
-    // Need to use .env file for API key later.
-    res.render('learnnearyou', {dynamicsrc})
-});
-
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -40,8 +33,11 @@ app.get('/buildaplan', (req, res) => {
     res.render('buildaplan');
 });
 
-app.get('/learnnearyou', (req, res) => {
-    res.render('learnnearyou');
+app.get('/:learningExperience', (req, res)=> {
+    let location = req.params.learningExperience;
+    let dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=${location}+near+me&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg`;
+    // Need to use .env file for API key later.
+    res.render('learnnearyou', {dynamicsrc})
 });
 
 // Listen on Port 5000

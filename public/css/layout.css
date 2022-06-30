@@ -121,7 +121,7 @@ footer {
   flex-direction: row-reverse;
   background-color: transparent;
   max-width: 1300px;
-  height: 35vh;
+  height: 40vh;
 }
 
 .socials {
@@ -169,7 +169,7 @@ footer {
   background-color: var(--aliceblue);
   border-radius: 4px;
   font-size: 1.2em;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .foot_a {

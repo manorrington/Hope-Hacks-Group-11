@@ -9,7 +9,7 @@ const port = 4000;
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
-app.use('/img', express.static(__dirname + 'public/img'));
+app.use('/public/images/', express.static('./public/images'));
 
 // Set Templating Engine
 app.use(expressLayouts);
@@ -35,7 +35,7 @@ app.get('/buildaplan', (req, res) => {
 
 app.get('/:learningExperience', (req, res)=> {
     let location = req.params.learningExperience;
-    let dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=${location}+near+me&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg`;
+    let dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=${location}&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg`;
     location === 'learnnearyou' ? dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=my+location&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg` : dynamicsrc = dynamicsrc;
     location === 'reset' ? dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=my+location&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg` : dynamicsrc = dynamicsrc;
     // Need to use .env file for API key later.

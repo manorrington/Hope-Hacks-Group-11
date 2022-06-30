@@ -61,14 +61,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:
+      1px 2px 2px var(--maxbluegreen),
+      2px 4px 4px var(--maxbluegreen),
+      3px 6px 6px var(--maxbluegreen);
 }
 
 button {
     font-family: 'SpaceMonoRegular', sans-serif;
     color: var(--richBlack);
     transition: all 0.4s;
-    border-radius: 4px;
+    border-radius: 5px;
     text-align: center;
+    box-shadow:
+      1px 2px 2px var(--maxbluegreen),
+      2px 4px 4px var(--maxbluegreen),
+      3px 6px 6px var(--maxbluegreen);
 }
 
 .buttons {
@@ -84,10 +92,19 @@ button {
     margin: 1em;
 }
 
+.location_link_reset {
+    width: 10em;
+    height: 3.5em;
+    margin: 1em;
+    background-color: var(--richBlack);
+    color: var(--aliceblue);
+}
+
+
 button:hover {
     cursor: pointer;
     background-color: var(--richBlack);
-    color: var(--maxbluegreen);
+    color: var(--aliceblue);
 }
 
 

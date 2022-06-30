@@ -34,6 +34,17 @@
     font-family: 'SpaceMonoRegular', sans-serif;
 }
 
+.title {
+    font-size: 3em;
+}
+
+.text_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .map_section {
     display: flex;
     justify-content: center;
@@ -42,7 +53,7 @@
 }
 
 .locationmap {
-    height: 60vh;
+    height: 45vh;
     width: 100%;
     border-radius: 4px;
     margin: 2em;

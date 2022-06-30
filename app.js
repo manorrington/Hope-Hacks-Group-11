@@ -36,6 +36,8 @@ app.get('/buildaplan', (req, res) => {
 app.get('/:learningExperience', (req, res)=> {
     let location = req.params.learningExperience;
     let dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=${location}+near+me&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg`;
+    location === 'learnnearyou' ? dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=my+location&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg` : dynamicsrc = dynamicsrc;
+    location === 'reset' ? dynamicsrc = `https://www.google.com/maps/embed/v1/search?q=my+location&key=AIzaSyBONgai1yh1DayA3SjpK_Otm4ZpEmPxhzg` : dynamicsrc = dynamicsrc;
     // Need to use .env file for API key later.
     res.render('learnnearyou', {dynamicsrc})
 });

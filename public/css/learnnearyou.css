@@ -77,10 +77,8 @@ button {
     text-align: center;
     box-shadow:
       1px 2px 2px var(--maxbluegreen),
-      2px 4px 4px var(--maxbluegreen),
-      4px 8px 8px var(--maxbluegreen),
-      8px 16px 16px var(--maxbluegreen),
-      16px 32px 32px var(--maxbluegreen);
+      2px 4px 4px  var(--maxbluegreen),
+      3px 6px 6px  var(--maxbluegreen);
 }
 
 .buttons {
@@ -107,8 +105,12 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: var(--richBlack);
-    color: var(--aliceblue);
+    box-shadow:
+      1px 2px 2px var(--maxbluegreen),
+      2px 4px 4px var(--maxbluegreen),
+      4px 8px 8px var(--maxbluegreen),
+      8px 16px 16px var(--maxbluegreen),
+      16px 32px 32px var(--maxbluegreen);
 }
 
 

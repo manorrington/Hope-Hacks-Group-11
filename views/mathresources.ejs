@@ -1,0 +1,17 @@
+<link href="css/index.css" rel="stylesheet">
+
+<section class="home_container">
+    <section class="main_container">
+        <h1>Welcome to Learnify</h1>
+        <h2>Testing</h2>
+        <div>
+            <ul>
+                <% math.forEach(data => { %>
+                <li><%= data.title %></li>
+                <li><%= data.description %></li>
+                <li><%= data.link %></li>
+                <% }) %>
+              </ul>
+        </div>
+    </section>
+</section>

@@ -35,19 +35,19 @@ app.get("/mathresources", (req, res) => {
   //get data from mongodb and pass it to view
   Resources.find({}, function (err, data) {
     if (err) throw err;
-    res.render("index", { math: data });
+    res.render('mathresources', { math: data });
   });
 });
 
 //gets all posts
-app.get("/resources", async (req, res) => {
-  try {
-    const posts = await Resources.find();
-    res.json(posts);
-  } catch (err) {
-    res.json({ message: err });
-  };
-});
+// app.get("/resources", async (req, res) => {
+//   try {
+//     const posts = await Resources.find();
+//     res.json(posts);
+//   } catch (err) {
+//     res.json({ message: err });
+//   };
+// });
 
 //submits a post
 app.post("/resources", async (req, res) => {

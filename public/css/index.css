@@ -26,9 +26,96 @@
     --puce: #C08497;
     --maxbluegreen: #75B9BE;
   }
-
+*{
+  font-family: 'SpaceMonoRegular';
+    src: url('SpaceMono-Regular.ttf')
+}
 .main_container {
     width: 70vw;
-    height: 100vh;
-    margin: 2em;
+    height: 50vw;
+    /* margin: 2em; */
+}
+
+/* .hero-image {
+  background-image: linear-gradient(rgba(4, 9, 0, 0.2), rgba(4, 9, 0, 0.5)), url("/public/images/sheep.jpg");
+  height: 100%;
+  background-attachment:scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: black;
+  border-bottom: 5px solid #030303;
+
+} */
+.slideshow{
+  max-height: 500px;
+  /* width: 500px; */
+  position:relative;
+  left:0px;
+}
+.slide{
+display:none;
+width:100%;
+height:100%;
+filter: brightness(0.4);
+}
+.whyLearnify {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  margin: 5em;
+  text-align: center;
+  /* width: 250px; */
+}
+
+.clipart img {
+  max-width: 100%;
+  min-width: 100%;
+  height: 350px;
+}
+
+.clipart {
+  font-size: 20px;
+  padding: 10px;
+  background-color:transparent;
+  color: rgb(0, 0, 0);
+  /* padding-left: 20px; */
+  /* border: rgb(0, 0, 0) 5px solid; */
+  /* border-radius: 30px; */
+  /* height: 700px; */
+  text-align: center;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+
+  /* remove border and add picture */
+}
+
+.clipart p {
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+  width: 250px;
+  text-align: center;
+}
+
+.findResources{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 5em;
+  text-align: center;
+  position:relative;
+  left:0;
+  margin-bottom: 30px;
+  background-color:transparent;
+
+}
+.findResources div p{
+font-size: 1.5em;
+}
+
+.findResources div img {
+  width:100%;
+  height:250px;
 }

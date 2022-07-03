@@ -1,10 +1,77 @@
 <link href="css/index.css" rel="stylesheet">
 
+
 <section class="home_container">
     <section class="main_container">
-        <h1>Welcome to Learnify</h1>
-        <h2>Testing</h2>
+        <section class="slideshow">
+            <img class="slide" src="/public/images/sheep.jpg" style="width:100%">
+            <img class="slide" src="/public/images/childReading.jpg" style="width:100%">
+            <img class="slide" src="/public/images/globe.jpg" style="width:100%">
+            <img class="slide" src="/public/images/group.jpg" style="width:100%">
+            <img class="slide" src="/public/images/justStart.jpg" style="width:100%">
+        </section>
 
         
+        </section>
+        <h1 style="text-align:center;font-size:60px;">Why Learnify?</h1>
+
+        <section class="whyLearnify">
+
+        <div class="clipart">
+            <img src=" /public/images/1.png" alt="">
+            <h1>h1</h1>
+            <p>info</p>
+        </div>
+        <div class="clipart">
+            <img src=" /public/images/2.png" alt="">
+            <h1> h1</h1>
+            <p>info </p>
+        </div>
+        <div class="clipart">
+            <img src="/public/images/3.png" alt="">
+            <h1>h1</h1>
+            <p>info </p>
+        </div>
     </section>
-</section>
+
+
+    <h2 style="text-align:center;font-size:30px;">Learnify is dedicated to help you find the right resources!</h2>
+
+    <section class="findResources">
+<div>
+<p>
+    Info on what kinds of resources and link to "learn near you tab"
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sint iste dolorum doloribus obcaecati laboriosam odit magni unde mollitia, dolore blanditiis exercitationem deleniti harum cum molestiae veritatis est? Voluptas, veritatis.
+</p>
+</div>
+<div>
+    <img src="/public/images/insideOfLibrary.jpg">
+    <button>Learn Near You!</button>
+</div>
+
+    </section>
+    </section>
+    
+
+
+<script>
+
+
+var myIndex = 0;
+slideshow();
+
+function slideshow() {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(slideshow, 3000); // Change image every 3 seconds
+}
+</script>
+
+
+

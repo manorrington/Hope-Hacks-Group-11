@@ -1,22 +1,28 @@
 // Imports
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
-const mongoose = require("mongoose");
-const Resources = require("./models/post");
-const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+const Math = require('./models/math');
+const EL = require('./models/el');
+// const Science = require('./models/science'); in progress
+// const Cooking = require('./models/cooking'); in progress
+// const Coding = require('./models/coding'); in progress
+const bodyParser = require('body-parser');
+
 const cors = require('cors');
 
 const app = express();
 const port = 4000;
 
-//database connection
+// Database Connection
 mongoose.connect(
-  "mongodb+srv://hopeuser:hopeuser1@hhdata.ecydj.mongodb.net/?retryWrites=true&w=majority",
+  'mongodb+srv://hopeuser:hopeuser1@hhdata.ecydj.mongodb.net/?retryWrites=true&w=majority',
   { useNewUrlParser: true },
-  () => console.log("DB connection successful")
+  () => console.log('DB connection successful')
 );
 
-//Middleware
+// Middleware
+
 app.use(bodyParser.json());
 app.use(cors()); //this allows ALL domains to fetch (access) our API with no issues
 
@@ -30,28 +36,51 @@ app.use('/public/images/', express.static('./public/images'));
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
-//First Party API
-app.get("/mathresources", (req, res) => {
+// First Party API
+app.get('/mathresources', (req, res) => {
   //get data from mongodb and pass it to view
-  Resources.find({}, function (err, data) {
+  Math.find({}, function (err, data) {
+
     if (err) throw err;
     res.render('mathresources', { math: data });
   });
 });
 
-//gets all posts
-// app.get("/resources", async (req, res) => {
-//   try {
-//     const posts = await Resources.find();
-//     res.json(posts);
-//   } catch (err) {
-//     res.json({ message: err });
-//   };
-// });
+app.get('/elresources', (req, res) => {
+  //get data from mongodb and pass it to view
+  EL.find({}, function (err, data) {
+    if (err) throw err;
+    res.render('elresources', { el: data });
+  });
+});
 
-//submits a post
-app.post("/resources", async (req, res) => {
-  const post = new Resources({
+// app.get('/scienceresources', (req, res) => {
+//   //get data from mongodb and pass it to view
+//   Science.find({}, function (err, data) {
+//     if (err) throw err;
+//     res.render('scienceresources', { science: data });
+//   });
+// }); in progress
+
+// app.get('/cookingresources', (req, res) => {
+//   //get data from mongodb and pass it to view
+//   Cooking.find({}, function (err, data) {
+//     if (err) throw err;
+//     res.render('cookingresources', { cooking: data });
+//   });
+// }); in progress
+ 
+// app.get('/codingresources', (req, res) => {
+//   //get data from mongodb and pass it to view
+//   Coding.find({}, function (err, data) {
+//     if (err) throw err;
+//     res.render('codingresources', { coding: data });
+//   });
+// }); in progress
+
+// Submit New Data / Postman
+app.post('/math', async (req, res) => {
+  const post = new Math({
     title: req.body.title,
     description: req.body.description,
     link: req.body.link
@@ -64,6 +93,67 @@ app.post("/resources", async (req, res) => {
     res.json({ message: err });
   };
 });
+
+app.post('/el', async (req, res) => {
+  const post = new EL({
+    title: req.body.title,
+    description: req.body.description,
+    link: req.body.link
+  });
+
+  try {
+    const savedPost = await post.save();
+    res.json(savedPost);
+  } catch (err) {
+    res.json({ message: err });
+  };
+});
+
+// app.post('/science', async (req, res) => {
+//   const post = new Science({
+//     title: req.body.title,
+//     description: req.body.description,
+//     link: req.body.link
+//   });
+
+//   try {
+//     const savedPost = await post.save();
+//     res.json(savedPost);
+//   } catch (err) {
+//     res.json({ message: err });
+//   };
+// }); in progress
+
+// app.post('/cooking', async (req, res) => {
+//   const post = new Cooking({
+//     title: req.body.title,
+//     description: req.body.description,
+//     link: req.body.link
+//   });
+
+//   try {
+//     const savedPost = await post.save();
+//     res.json(savedPost);
+//   } catch (err) {
+//     res.json({ message: err });
+//   };
+// }); in progress
+
+// app.post('/coding', async (req, res) => {
+//   const post = new Coding({
+//     title: req.body.title,
+//     description: req.body.description,
+//     link: req.body.link
+//   });
+
+//   try {
+//     const savedPost = await post.save();
+//     res.json(savedPost);
+//   } catch (err) {
+//     res.json({ message: err });
+//   };
+// }); in progress
+
 
 // Navigation
 app.get('/', (req, res) => {
@@ -91,6 +181,6 @@ app.get('/:learningExperience', (req, res)=> {
     res.render('learnnearyou', {dynamicsrc})
 });
 
-// Listen on Port 5000
+// Listen on Port 4000
 app.listen(port, () => console.info(`App listening on port ${port}`));
 

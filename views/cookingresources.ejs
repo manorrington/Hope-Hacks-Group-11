@@ -1,0 +1,58 @@
+<link href="css/resources.css" rel="stylesheet">
+
+<section class="home_container">
+    <section class="main_container">
+        <h1>Welcome to Learnify</h1>
+        <h2>Testing</h2>
+        <div>
+            <div class="grid-container">
+            <ul>
+                <% math.forEach(data => { %>
+                    <br>
+                <div class="grid-item">    
+                <li><h3 class="webhead"><a href="<%= data.link %>"><%= data.title %></a></h3></li>
+                <li class="descript"><%= data.description %></li>
+                <li class="link"><a href="<%= data.link %>"><%= data.link %></a></li>
+                </div>
+                    <br>
+                <% }) %>
+              </ul>
+              </div>
+
+            <div class="grid-container1">
+                <ul>
+                <div class="grid-item">
+                 <li><img class="weblogo" src="/public/images/epicurious-social-logo.png"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo" src="/public/images/download.png"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo sub" src="/public/images/serious eats.png"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo sub" src="/public/images/myfridgefood.png"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo sub" src="/public/images/budget_bytes.jpeg"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo" src="/public/images/1cook.jpeg"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo add" src="/public/images/cook2.jpeg"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo add" src="/public/images/cook3.jpeg"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo add more1" src="/public/images/cook4.jpeg"></li>
+                 </div>
+                 <div class="grid-item">
+                    <li><img class="weblogo add spec more" src="/public/images/cook5.jpeg"></li>
+                 </div>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

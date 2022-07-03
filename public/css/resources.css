@@ -1,0 +1,89 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #75B9BE;
+}
+
+@font-face {
+    font-family: 'SpaceMonoRegular';
+    src: url('SpaceMono-Regular.ttf')
+  }
+
+ul {
+    list-style: none;
+}
+
+.webhead {
+    font-size: 27px;
+    font-family: 'SpaceMonoRegular';
+}
+
+.webhead:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #75B9BE;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    width: 50%;
+}
+
+.grid-item {
+    padding: 50px;
+
+}
+
+.link {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.descript {
+    /*width: 50%;*/
+}
+
+.grid-container1{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 5px;
+    float: left;
+    position: absolute;
+    top: 300px;
+}
+
+.grid-container1 > .grid-item {
+    padding: 10px;
+}
+
+.weblogo {
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
+    padding-bottom: 20px;
+}
+
+.add {
+    padding-top: 40px;
+}
+
+.sub {
+    padding-bottom: 5px;
+}
+
+.spec {
+    padding-top: 20px;
+}
+
+.more {
+    padding-top: 50px;
+}
+
+.more1{
+    padding-top: 80px;
+}

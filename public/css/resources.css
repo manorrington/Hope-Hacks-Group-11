@@ -1,9 +1,9 @@
-a {
+ .main_container a {
     text-decoration: none;
     color: inherit;
 }
 
-a:hover {
+.mian_container a:hover {
     color: #75B9BE;
 }
 
@@ -11,6 +11,17 @@ a:hover {
     font-family: 'SpaceMonoRegular';
     src: url('SpaceMono-Regular.ttf')
   }
+
+.h1head {
+    font-family: 'SpaceMonoRegular';
+    font-size: 14px;
+}
+
+.h2head {
+    font-family: 'SpaceMonoRegular';
+    font-size: 24px;
+
+}
 
 ul {
     list-style: none;
@@ -86,4 +97,13 @@ ul {
 
 .more1{
     padding-top: 80px;
+}
+
+@media only screen and (max-width: 650px){
+    .weblogo {
+        display: none;
+    }
+}
+
+.main_container {
 }

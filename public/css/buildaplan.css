@@ -31,4 +31,92 @@
     width: 70vw;
     height: 100vh;
     margin: 2em;
+    font-family: 'SpaceMonoRegular', sans-serif;
+    position: relative;
+    right: 8em;
+}
+
+.heading {
+  text-align: center;
+  position: relative;
+  left: 5em;
+}
+
+#h1 {
+  position: relative;
+  right: 1em;
+}
+
+button {
+  margin: 1rem;
+}
+
+.btn {
+  background-color: var(--background-color);
+  color: #222;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.30);
+  padding: 4em 10em;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  font-family: 'SpaceMonoRegular', sans-serif;
+  font-size: 1em;
+
+  --background-color: #E1F2FE;
+  --border-size: 2px;
+  --accent-color: #75B9BE;
+}
+
+.border {
+  border: #212D40 1px solid;
+  border-radius: 9px;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 200px 200px;
+  justify-content: space-around;
+}
+
+.btn-math {
+  padding: 4em 11em;
+}
+
+.btn-cooking {
+  position: relative;
+  left: 20em;
+}
+
+.btn.btn-background-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--accent-color);
+
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: white;
+  /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.40); */
 }

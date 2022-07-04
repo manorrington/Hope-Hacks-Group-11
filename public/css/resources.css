@@ -3,7 +3,7 @@
     color: inherit;
 }
 
-.mian_container a:hover {
+.main_container a:hover {
     color: #75B9BE;
 }
 
@@ -105,5 +105,11 @@ ul {
     }
 }
 
-.main_container {
+.main_container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main_container a:hover {
+    color: #75B9BE;
 }

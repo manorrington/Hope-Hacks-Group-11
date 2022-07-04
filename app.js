@@ -6,6 +6,7 @@ const Math = require("./models/math");
 const Reading = require("./models/reading");
 const Coding = require("./models/coding");
 const Cooking = require("./models/cooking");
+const Science = require("./models/science");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
@@ -21,7 +22,7 @@ mongoose.connect(
   () => console.log("DB connection successful")
 );
 
-//Middleware
+// Middleware
 app.use(bodyParser.json());
 app.use(cors()); //this allows ALL domains to fetch (access) our API with no issues
 
@@ -68,20 +69,18 @@ app.get("/englishresources", (req, res) => {
   });
 });
 
-//gets all posts
-// app.get("/resources", async (req, res) => {
-//   try {
-//     const posts = await Resources.find();
-//     res.json(posts);
-//   } catch (err) {
-//     res.json({ message: err });
-//   };
-// });
+app.get("/scienceresources", (req, res) => {
+  //get data from mongodb and pass it to view
+  Science.find({}, function (err, data) {
+    if (err) throw err;
+    res.render('scienceresources', { science: data });
+  });
+});
 
-//submits a post
-app.post("/resources", async (req, res) => {
+// Post for math data
+app.post("/math", async (req, res) => {
   
-  const post = new Resources({
+  const post = new Math({
     title: req.body.title,
     description: req.body.description,
     link: req.body.link
@@ -114,7 +113,7 @@ app.post("/reading", async (req, res) => {
    
 })
 
-//Post for cooking data
+// Post for cooking data
 app.post("/cooking", async (req, res) => {
   
   const post = new Cooking({
@@ -133,7 +132,7 @@ app.post("/cooking", async (req, res) => {
    
 })
 
-//Post for coding
+// Post for coding
 app.post("/coding", async (req, res) => {
   
   const post = new Coding({
@@ -149,8 +148,25 @@ app.post("/coding", async (req, res) => {
     res.json({ message: err });
     console.log(err);
   };
-   
-})
+});
+
+// Post for coding
+app.post("/science", async (req, res) => {
+  
+  const post = new Science({
+    title: req.body.title,
+    description: req.body.description,
+    link: req.body.link
+  });
+  
+  try {
+    const savedPost = await post.save();
+    res.json(savedPost);
+  } catch (err) {
+    res.json({ message: err });
+    console.log(err);
+  };
+});
 
 // Navigation
 app.get('/', (req, res) => {

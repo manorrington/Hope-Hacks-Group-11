@@ -26,33 +26,32 @@
     --puce: #C08497;
     --maxbluegreen: #75B9BE;
   }
-*{
+.home_container{
   font-family: 'SpaceMonoRegular';
-    src: url('SpaceMono-Regular.ttf')
+  src: url('SpaceMono-Regular.ttf')
 }
 .main_container {
     width: 70vw;
     height: 50vw;
-    /* margin: 2em; */
 }
 
-/* .hero-image {
-  background-image: linear-gradient(rgba(4, 9, 0, 0.2), rgba(4, 9, 0, 0.5)), url("/public/images/sheep.jpg");
-  height: 100%;
-  background-attachment:scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  background-color: black;
-  border-bottom: 5px solid #030303;
-
-} */
 .slideshow{
+  text-align: center;
   max-height: 500px;
-  /* width: 500px; */
   position:relative;
-  left:0px;
+  padding-top:2em;
+}
+
+.textOverSS span{
+  font-size: 5vw;
+}
+.textOverSS{
+  margin: 1em;
+  text-align: center;
+  position:absolute;
+  top:5vh;
+  color:var(--maxbluegreen);
+  font-size:2w;
 }
 .slide{
 display:none;
@@ -60,43 +59,42 @@ width:100%;
 height:100%;
 filter: brightness(0.4);
 }
+.h1belowSS{
+  text-align:center;
+  font-size:60px;
+}
 .whyLearnify {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  margin: 5em;
+  margin-bottom: 5em;
   text-align: center;
-  /* width: 250px; */
 }
 
-.clipart img {
-  max-width: 100%;
-  min-width: 100%;
-  height: 350px;
+.bookClipart{
+  width: 250px;
+  height:250px;
 }
-
 .clipart {
-  font-size: 20px;
-  padding: 10px;
   background-color:transparent;
   color: rgb(0, 0, 0);
-  /* padding-left: 20px; */
-  /* border: rgb(0, 0, 0) 5px solid; */
-  /* border-radius: 30px; */
-  /* height: 700px; */
   text-align: center;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6);
-  transition: 0.3s;
-
-  /* remove border and add picture */
+  /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6);
+  transition: 0.3s; */
+  max-width: 250px;
 }
-
+.clipart h1{
+  font-size: 1em;
+  font-weight: bolder;
+}
 .clipart p {
   color: black;
-  font-size: 3em;
+  font-size: .8em;
   font-weight: bold;
   width: 250px;
   text-align: center;
+  padding-top:.5em;
+  font-weight: 900;
 }
 
 .findResources{
@@ -109,7 +107,6 @@ filter: brightness(0.4);
   left:0;
   margin-bottom: 30px;
   background-color:transparent;
-
 }
 .findResources div p{
 font-size: 1.5em;
@@ -118,4 +115,75 @@ font-size: 1.5em;
 .findResources div img {
   width:100%;
   height:250px;
+}
+button{
+font-family: 'SpaceMonoRegular', sans-serif;
+color: var(--richBlack);
+transition: all 0.4s;
+border-radius: 5px;
+text-align: center;
+box-shadow:
+  1px 2px 2px var(--maxbluegreen),
+  2px 4px 4px  var(--maxbluegreen),
+  3px 6px 6px  var(--maxbluegreen);
+  width: 10em;
+    height: 3.5em;
+    margin: 1em;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow:
+    1px 2px 2px var(--maxbluegreen),
+    2px 4px 4px var(--maxbluegreen),
+    4px 8px 8px var(--maxbluegreen),
+    8px 16px 16px var(--maxbluegreen),
+    16px 32px 32px var(--maxbluegreen);
+}
+
+@media screen and (max-width: 800px) {
+  .whyLearnify {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .slideshow{
+    text-align: center;
+    max-height: 500px;
+    position:absolute;
+    padding-top:0em;
+    left:0;
+  }
+  .h1belowSS{
+    margin-top:100px;
+  }
+  .textOverSS span{
+    font-size: 30px;
+  }
+  .textOverSS{
+    top:4vh;
+    color:var(--maxbluegreen);
+    font-size:15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .whyLearnify {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 2em;
+  }
+
+  .findResources{
+    display: grid;
+    grid-template-columns: 1fr;
+  
+  }
+  .textOverSS span{
+    font-size: 40px;
+  
+  }
+  .textOverSS{
+    top:4vh;
+    color:var(--maxbluegreen);
+    font-size:10px;
+  }
+
 }

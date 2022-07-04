@@ -16,7 +16,39 @@
                     <a href="/institutions near me"><button class="location_link">Institutions</button></a>
                     <a href="/reset"><button class="location_link_reset">Reset</button></a>
             </section>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Select Resources:</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/tutoring near me">Tutoring</a>
+                    <a href="/educational organizations near me">Organizations</a>
+                    <a href="/museums near me">Museums</a>
+                    <a href="/libraries near me">Libraries</a>
+                    <a href="/institutions near me">Institutions</a>
+                    <a href="/reset">Reset</a>
+                </div>
+              </div>
             <iframe class="locationmap" style="border:0" loading="lazy" allowfullscreen src="<%= dynamicsrc %>"></iframe>   
         </section>
     </section>
 </section>
+
+<script>
+    // Dropdown Menu For Mobile Responsiveness
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>

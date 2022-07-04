@@ -29,7 +29,7 @@
 
 .main_container {
     width: 70vw;
-    height: 375vh;
+    height: 450vh;
     margin: 2em;
     font-family: 'SpaceMonoRegular', sans-serif;
 }
@@ -76,42 +76,42 @@ ul {
 
 .three {
     position: relative;
-    top: 138px;
+    top: 175px;
 }
 
 .four {
     position: relative;
-    top: 200px;
+    top: 325px;
 }
 
 .five {
     position: relative;
-    top: 327px;
+    top: 440px;
 }
 
 .six {
     position: relative;
-    top: 370px;
+    top: 475px;
 }
 
 .seven {
     position: relative;
-    top: 348px;
+    top: 475px;
 }
 
 .eight {
     position: relative;
-    top: 325px;
+    top: 475px;
 }
 
 .nine {
     position: relative;
-    top: 316px;
+    top: 500px;
 }
 
 .ten {
     position: relative;
-    top: 354px;
+    top: 550px;
 }
 
 .link {

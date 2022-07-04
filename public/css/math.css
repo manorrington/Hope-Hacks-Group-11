@@ -29,7 +29,7 @@
 
 .main_container {
     width: 70vw;
-    height: 375vh;
+    height: 425vh;
     margin: 2em;
     font-family: 'SpaceMonoRegular', sans-serif;
 }
@@ -81,17 +81,17 @@ ul {
 
 .four {
     position: relative;
-    top: 200px;
+    top: 225px;
 }
 
 .five {
     position: relative;
-    top: 292px;
+    top: 340px;
 }
 
 .six {
     position: relative;
-    top: 370px;
+    top: 420px;
 }
 
 .seven {
@@ -101,17 +101,17 @@ ul {
 
 .eight {
     position: relative;
-    top: 378px;
+    top: 400px;
 }
 
 .nine {
     position: relative;
-    top: 357px;
+    top: 425px;
 }
 
 .ten {
     position: relative;
-    top: 400px;
+    top: 475px;
 }
 
 .link {

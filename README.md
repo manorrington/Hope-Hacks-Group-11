@@ -3,7 +3,7 @@
 
 <h3> What is Learnify? </h3>
 
-At Learnify, we believe that everyone deserves easy access to education and free resources for the latest and greatest in online resources. With our application and website, we have created a space to promote easy learning and innovation for those who believe they are up for the task of learning in the modern technological way. Formal schooling systems are slowly becoming irrelevant due to the sheer volume of information in today's day in age and how rapidly it is growing. With our app, we constantly update our curated resources to allow driven individuals to find the specific help they need with their educational endeavors. 
+At Learnify, we believe that everyone deserves easy access to education and free resources for the latest and greatest in online resources. With our application and website, we have created a space to promote easy learning and innovation for those who believe they are up for the task of learning in the modern technological way. Formal schooling systems are slowly becoming irrelevant due to the sheer volume of information in today's day in age and how rapidly information is changing. With our app, we constantly update our curated resources to allow driven individuals to find the specific help they need in their educational endeavors. 
 
 <hr style="border:2px solid gray">
 

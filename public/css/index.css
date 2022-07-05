@@ -30,6 +30,7 @@
   font-family: 'SpaceMonoRegular';
   src: url('SpaceMono-Regular.ttf')
 }
+
 .main_container {
     width: 70vw;
     height: 50vw;
@@ -45,24 +46,29 @@
 .textOverSS span{
   font-size: 5vw;
 }
+
 .textOverSS{
   margin: 1em;
   text-align: center;
   position:absolute;
   top:5vh;
-  color:var(--maxbluegreen);
+  color:var(--aliceblue);
   font-size:2w;
 }
+
 .slide{
 display:none;
 width:100%;
 height:100%;
 filter: brightness(0.4);
+border-radius: 5px;
 }
+
 .h1belowSS{
   text-align:center;
   font-size:60px;
 }
+
 .whyLearnify {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -112,10 +118,18 @@ filter: brightness(0.4);
 font-size: 1.5em;
 }
 
-.findResources div img {
-  width:100%;
-  height:250px;
+.bottom_img {
+  width: 100%;
+  height: 250px;
 }
+
+.dedicated_statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
 button{
 font-family: 'SpaceMonoRegular', sans-serif;
 color: var(--richBlack);
@@ -159,8 +173,6 @@ button:hover {
     font-size: 30px;
   }
   .textOverSS{
-    top:4vh;
-    color:var(--maxbluegreen);
     font-size:15px;
   }
 }
@@ -182,8 +194,21 @@ button:hover {
   }
   .textOverSS{
     top:4vh;
-    color:var(--maxbluegreen);
-    font-size:10px;
+    font-size: 0.5em;
   }
 
+  .dedicated_statement {
+    font-size: 1em;
+    text-align: center;
+    margin: 1em;
+    font-family: "SpaceMonoBold";
+  }
+
+  .bottom_img {
+    display: none;
+  }
+
+  .slideshow {
+    margin: 1em;
+  }
 }

@@ -3,15 +3,45 @@
 <section class="home_container">
     <section class="main_container">
         <div class="heading">
-            <h1 id="h1">Build A Plan</h1>
-            <h2>Choose a subject to get free online resources!</h2>
+            <h1 id="h1">Resources</h1>
+            <h2>Choose a subject to get free online curated resources!</h2>
         </div>
         <div class="btn-container">
-            <a href="/mathresources"><button class="border btn-math btn btn-background-slide">Math</button></a>
-            <a href="/englishresources"><button class="border btn btn-background-slide">English</button></a>
-            <a href="/scienceresources"><button class="border btn btn-background-slide">Science</button></a>
-            <a href="/codingresources"><button class="border btn btn-background-slide">Coding</button></a>
-            <a href="/cookingresources"><button class="border btn-cooking btn btn-background-slide">Cooking</button></a>
+            <a href="/mathresources" class="resource_link"><button class="border btn-math btn btn-background-slide">Math</button></a>
+            <a href="/englishresources" class="resource_link"><button class="border btn btn-background-slide">English</button></a>
+            <a href="/scienceresources" class="resource_link"><button class="border btn btn-background-slide">Science</button></a>
+            <a href="/codingresources" class="resource_link"><button class="border btn btn-background-slide">Coding</button></a>
+            <a href="/cookingresources" class="resource_link"><button class="border btn-cooking btn btn-background-slide">Cooking</button></a>
         </div>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Select Resources:</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/mathresources">Math</a>
+                <a href="/englishresources">English</a>
+                <a href="/scienceresources">Science</a>
+                <a href="/codingresources">Coding</a>
+                <a href="/cookingresources">Cooking</a>
+            </div>
+          </div>
     </section>
 </section>
+<script>
+    // Dropdown Menu For Mobile Responsiveness
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+</script>

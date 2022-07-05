@@ -2,17 +2,19 @@
 
 <section class="home_container">
     <section class="main_container">
-        <h1>Resources</h1>
-        <h2>Science</h2>
+      <section class="resource_header">
+         <h1 class="h1head">Resources:</h1>
+         <h2 class="h2head">Science</h2>
+       </section>
         <div>
             <div class="grid-container">
             <ul>
                 <% science.forEach(data => { %>
                     <br>
                 <div class="grid-item">    
-                <li><h3 class="webhead"><a href="<%= data.link %>" class="rs-link"><%= data.title %></a></h3></li>
+                <li><h3 class="webhead"><a href="<%= data.link %>" class="rs-link" target="_blank"><%= data.title %></a></h3></li>
                 <li class="descript"><%= data.description %></li>
-                <li class="link"><a href="<%= data.link %>" class="rs-link"><%= data.link %></a></li>
+                <li class="link"><a href="<%= data.link %>" class="rs-link" target="_blank"><%= data.link %></a></li>
                 </div>
                     <br>
                 <% }) %>

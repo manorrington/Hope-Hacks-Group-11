@@ -31,7 +31,7 @@
     src: url('SpaceMono-Regular.ttf');
     }
 .main_container {
-    width: 70vw;
+    width: 100%;
     height: 60vh;
 }
 
@@ -43,11 +43,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  left:0;
   background-color: black;
   border-bottom: 5px solid #030303;
   width:100%;
+  border-radius: 5px;
 }
 .textOverHero span{
   font-size: 2em;
@@ -56,7 +55,7 @@
   margin: 1em;
   text-align: center;
   top:5vh;
-  color:var(--maxbluegreen);
+  color:var(--aliceblue);
 }
 .textOverHero h2{
 font-size:2em;
@@ -79,11 +78,11 @@ padding-right:4em;
   text-align: center;
   /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6);
   transition: 0.3s; */
-  max-width: 250px;
 }
 .teamImages{
-  width: 250px;
-  height:250px;
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
 }
 
 .team h1{

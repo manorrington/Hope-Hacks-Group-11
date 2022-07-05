@@ -130,9 +130,14 @@ button:hover {
     width: 80vw;
 }
 
-.title, .description {
+.description {
     font-size: 1em;
     text-align: center;
+}
+
+.title {
+  font-size: 1.5em;
+  text-align: center;
 }
 
 /* Dropdown Button source: https://www.w3schools.com/howto/howto_js_dropdown.asp */

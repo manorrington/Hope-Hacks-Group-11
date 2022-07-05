@@ -24,6 +24,8 @@ We utilized a wide variety of different technologies such as MongoDB, NodeJS, Ex
   
   ➳ Since we have utilized both a MySQL database and a MongoDB, you will only be able to use the website services that use the MongoDB because you would         have to host a SQL database to properly utilize those functions.
   
+  ➳ Navigate over to your browser of choice (preferrably Google Chrome) and type "localhost:4000" as the URL. 
+  
   ➳ Have fun!
   
   <hr style="border:2px solid gray">
@@ -36,5 +38,8 @@ We utilized a wide variety of different technologies such as MongoDB, NodeJS, Ex
     ➳ Micah Norrington
     ➳ Reggie Goodloe 
   
+    <hr style="border:2px solid gray">
+
+View License file in repository for Legal and Copyright Information
   
   

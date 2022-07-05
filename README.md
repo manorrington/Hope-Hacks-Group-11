@@ -1,16 +1,30 @@
-# Hope-Hacks-Group-11
+<h1> Welcome to Learnify </h1>
+<hr style="border:2px solid gray">
 
-- You should be using a single Github repo for you and your team to work on.
-- Your directories need to be structured and neat. 
-- You should not upload any of your node modules onto this repo.
-- Your README.md file should include steps to installing and running your app. You should also include the certain technologies you used to build your app.
+<h3> What is Learnify? </h3>
 
-- Organized Github Repository with a LICENSE, 
-a README, and a .gitignore file present
-- A server that is sending requests to 
-a front-end client (HTML website).
-- Deployed and hosted (wont grade if not hosted)
-- Connected to a database that does CRUD
-- App must be using a 1st party API and 3rd party APIs
-- Be creative! Don’t limit yourself and your ideas! ☺
-- This is a test
+At Learnify, we believe that everyone deserves easy access to education and free resources to the latest and greatest in online resources. With our application and website, we have created a space to promote easy learning and innovation for those who believe they are up for the task of learning in the modern technological way. Formal schooling systems are slowly becoming irrelevant due to the sheer volume of information in today's day in age and how rapidly it is growing. With our app, we constantly update our curated resources to allow driven individuals to find the specific help they need with their educational endeavors. 
+
+<hr style="border:2px solid gray">
+
+<h3> Visit Learnify </h3>
+
+Our application is fully deployed on an EC2 instance. You can visit it <a href="http://18.212.64.60:4000" target="_blank">here!</a>
+
+
+We utilized a wide variety of different technologies such as MongoDB, NodeJS, ExpressJS, MySQL, Amazon EC2, EJS, and CSS (Front-End). If you would like to download our files and view/run the applicaton locally, we advise you to follow the steps outlined below:
+
+  ➳ Clone, fork or download this repository to your computer.
+  
+  ➳ Open the Hope-Hacks-Group-11 folder in Visual Studio Code. 
+  
+  ➳ If you have NodeJS installed already, you can type the command: "npm install". This will download the Node modules and create an environment for you         to be able to run the app.
+  
+  ➳ Once you have installed the Node Modules, you can run the command "npm start" and it should specify if your localhost is listening on Port 4000. If           that does not work, try running the command "node app.js".
+  
+  ➳ Since we have utilized both a MySQL database and a MongoDB, you will only be able to use the website services that use the MongoDB because you would         have to host a SQL database to properly utilize those functions.
+  
+  ➳ Have fun!
+  
+  
+  

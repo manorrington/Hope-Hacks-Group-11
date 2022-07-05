@@ -9,6 +9,7 @@ const Cooking = require("./models/cooking");
 const Science = require("./models/science");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const port = 4000;
@@ -19,8 +20,23 @@ mongoose.connect(
  "mongodb+srv://hopeuser:hopeuser1@hhdata.ecydj.mongodb.net/?retryWrites=true&w=majority", 
   { useNewUrlParser: true, 
   },
-  () => console.log("DB connection successful")
+  () => console.log("MongoDB connection successful!")
 );
+
+//second database (SQL) connection
+const mysql = require('mysql');
+ 
+const connection=mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password:'password',
+    database:'node_crud'
+});
+ 
+connection.connect(function(error){
+    if(!!error) console.log(error);
+    else console.log('SQL Database Connected!');
+}); 
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,9 +48,73 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/public/images/', express.static('./public/images'));
 
+//set views file
+app.set('views',path.join(__dirname,'views'));
+
 // Set Templating Engine
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// ---------------------------------------Study Planner-------------------------------------------
+app.get('/studyplan',(req, res) => {
+  // res.send('CRUD Operation using NodeJS / ExpressJS / MySQL');
+  let sql = "SELECT * FROM users";
+  let query = connection.query(sql, (err, rows) => {
+      if(err) throw err;
+      res.render('user_index', {
+          title : 'Create A Study Plan!',
+          users : rows
+      });
+  });
+});
+
+app.get('/add',(req, res) => {
+  res.render('user_add', {
+      title : 'Add A Study Item'
+  });
+});
+
+app.post('/save',(req, res) => { 
+  let data = {name: req.body.name, email: req.body.email, phone_no: req.body.phone_no};
+  let sql = "INSERT INTO users SET ?";
+  let query = connection.query(sql, data,(err, results) => {
+    if(err) throw err;
+    res.redirect('/studyplan');
+  });
+});
+
+app.get('/edit/:userId',(req, res) => {
+  const userId = req.params.userId;
+  let sql = `Select * from users where id = ${userId}`;
+  let query = connection.query(sql,(err, result) => {
+      if(err) throw err;
+      res.render('user_edit', {
+          title : 'Edit Study Plan',
+          user : result[0]
+      });
+  });
+});
+
+app.post('/update',(req, res) => {
+  const userId = req.body.id;
+  let sql = "update users SET name='"+req.body.name+"',  email='"+req.body.email+"',  phone_no='"+req.body.phone_no+"' where id ="+userId;
+  let query = connection.query(sql,(err, results) => {
+    if(err) throw err;
+    res.redirect('/studyplan');
+  });
+});
+
+app.get('/delete/:userId',(req, res) => {
+  const userId = req.params.userId;
+  let sql = `DELETE from users where id = ${userId}`;
+  let query = connection.query(sql,(err, result) => {
+      if(err) throw err;
+      res.redirect('/studyplan');
+  });
+});
+
+// --------------------------------------End Study Planner----------------------------------------
 
 //First Party API
 app.get("/mathresources", (req, res) => {
@@ -197,3 +277,70 @@ app.get('/:learningExperience', (req, res)=> {
 // Listen on Port 5000
 app.listen(port, () => console.info(`App listening on port ${port}`));
 
+
+
+
+
+
+// app.get('/studyplan',(req, res) => {
+//   // res.send('CRUD Operation using NodeJS / ExpressJS / MySQL');
+//   let sql = "SELECT * FROM users";
+//   let query = connection.query(sql, (err, rows) => {
+//       if(err) throw err;
+//       res.render('studyplan', {
+//           title : 'Create a Study Plan!',
+//           users : rows
+//       });
+//   });
+// });
+
+// app.get('/plan_add',(req, res) => {
+//   res.render('plan_add', {
+//       title : 'Add To Study Plan'
+//   });
+// });
+
+// app.get('/plan_edit',(req, res) => {
+//   res.render('plan_edit', {
+//       title : 'Edit Study Plan'
+//   });
+// });
+
+// app.get('/edit/:userId',(req, res) => {
+//   const userId = req.params.userId;
+//   let sql = `Select * from users where id = ${userId}`;
+//   let query = connection.query(sql,(err, result) => {
+//       if(err) throw err;
+//       res.render('plan_edit', {
+//           title : 'Edit Study Plan',
+//           user : result[0]
+//       });
+//   });
+// });
+
+// app.get('/delete/:userId',(req, res) => {
+//   const userId = req.params.userId;
+//   let sql = `DELETE from users where id = ${userId}`;
+//   let query = connection.query(sql,(err, result) => {
+//       if(err) throw err;
+//       res.redirect('/studyplan');
+//   });
+// });
+
+// app.post('/save',(req, res) => { 
+//   let data = {name: req.body.name, email: req.body.email, phone_no: req.body.phone_no};
+//   let sql = "INSERT INTO users SET ?";
+//   let query = connection.query(sql, data,(err, results) => {
+//     if(err) throw err;
+//     res.redirect('/studyplan');
+//   });
+// });
+
+// app.post('/update',(req, res) => {
+//   const userId = req.body.id;
+//   let sql = "update users SET name='"+req.body.name+"',  email='"+req.body.email+"',  phone_no='"+req.body.phone_no+"' where id ="+userId;
+//   let query = connection.query(sql,(err, results) => {
+//     if(err) throw err;
+//     res.redirect('/studyplan');
+//   });
+// });

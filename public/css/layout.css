@@ -109,7 +109,7 @@
   align-items: center;
   width: 100%;
   background-color: var(--maxbluegreen);
-  border-bottom: 3px solid var(--richBlack);
+  border-bottom: 2px solid var(--richBlack);
 }
 
 .header {

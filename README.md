@@ -40,9 +40,7 @@ If you would like to download our files and view/run the applicaton locally, we 
     ➳ Jose Portillo
     ➳ Micah Norrington
     ➳ Reggie Goodloe 
-  
-    <hr style="border:2px solid gray">
 
-View License file in repository for Legal and Copyright Information
+<h2> View License file in repository for Legal and Copyright Information </h2>
   
   

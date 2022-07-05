@@ -7,12 +7,12 @@ At Learnify, we believe that everyone deserves easy access to education and free
 
 <hr style="border:2px solid gray">
 
-<h3> Visit Learnify </h3>
+<h3> How to View/Visit Learnify </h3>
 
 Our application is fully deployed on an EC2 instance. You can visit it <a href="http://18.212.64.60:4000" target="_blank">here!</a>
 
 
-We utilized a wide variety of different technologies such as MongoDB, NodeJS, ExpressJS, MySQL, Amazon EC2, EJS, and CSS (Front-End). If you would like to download our files and view/run the applicaton locally, we advise you to follow the steps outlined below:
+We utilized a wide variety of different technologies such as MongoDB, NodeJS, ExpressJS, MySQL, Amazon EC2, EJS, and CSS (Front-End). <h6> If you would like to download our files and view/run the applicaton locally, we advise you to follow the steps outlined below: </h6>
 
   ➳ Clone, fork or download this repository to your computer.
   

@@ -26,5 +26,15 @@ We utilized a wide variety of different technologies such as MongoDB, NodeJS, Ex
   
   ➳ Have fun!
   
+  <hr style="border:2px solid gray">
+
+<h2> Learnify is a organization created in full part by the following individuals:
   
+    ➳ Shaar Haq
+    ➳ Pete Branham
+    ➳ Jose Portillo
+    ➳ Micah Norrington
+    ➳ Reggie Goodloe 
+  
+  </h2>
   
